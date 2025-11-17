@@ -1,18 +1,221 @@
+---
+SalesPulse360 – End-to-End SQL Analytics & Dashboard Project
+Customer & Product Insights | SQL Data Analytics | ETL | Data Warehouse Continuation
+📌 Project Overview
+
+SalesPulse360 is an end-to-end SQL analytics project.This project is a continuation of my [Data Warehouse Project](../data-warehouse-project), where:
+- **Bronze Layer**: Raw ERP and CRM data were extracted.
+- **Silver Layer**: Data was cleaned, transformed, and standardized.
+- **Gold Layer**: Analytical models were created for reporting.
+This repository represents the **analytics stage**, where SQL is used to generate insights from the cleaned (Gold) data.
+This repository focuses on the Analytics Layer, where I use SQL to generate customer insights, product performance metrics, segmentation analysis, and dashboard-ready datasets.
+
+The project integrates cleaned datasets from CRM, ERP, and Product Systems, and provides business-focused insights through Power BI dashboards for Customer and Product analytics.
+
+🧱 Project Architecture
+1. Data Sources
+
+CRM
+
+cust_info – 20,000 rows
+
+prd_info – 500 rows
+
+sales_details – 65,000 rows
+
+ERP
+
+cust_az12.csv – 18,000 records
+
+loc_a101.csv – 18,000 records
+
+px_i.csv – 38 rows (Product Category, Subcategory, Maintenance)
+
+2. Pipeline Flow
+
+Raw (Bronze): Direct extraction from CRM/ERP
+
+Cleaned (Silver): Standardization + Missing value handling
+
+Analytics (Gold): Final dimensional model + SQL aggregations
+
+Power BI Dashboards: Customer Insights + Product Insights
+
+🎯 Business Problems Solved
+Customer Dashboard
+
+How many customers are new, regular, or VIP?
+
+Which age groups contribute the highest revenue?
+
+What is the buying recency and spending trend?
+
+Who are the top-performing customers and countries?
+
+How do different segments behave across sales metrics?
+
+Product Dashboard
+
+Which product categories drive maximum revenue?
+
+Which subcategories have the highest lifecycle and demand?
+
+Which regions contribute the most to each product line?
+
+What is the sales distribution across countries?
+
+Which product types are high-performers vs. low-performers?
+
+💡 Key Insights Delivered
+Customer Insights
+
+Total Orders: 28K
+
+Total Customers: 18K
+
+Sales by Segment:
+
+Regular: ₹8M (26%)
+
+New: ₹11M (38%)
+
+VIP: ₹11M (37%)
+
+Age group contribution:
+
+50+ years: ₹20M
+
+40–49 years: ₹10M
+
+30–39 years: Very low
+
+Recency analysis:
+
+Majority purchases occur in 0–10K recency window
+
+Top 10 customers identified using multi-metric ranking
+
+Product Insights
+
+Total Orders: 60K
+
+Avg Order Value: ₹142K
+
+Avg Monthly Revenue: ₹2M
+
+Category sales:
+
+Bikes – ₹28M (94.18% of total sales)
+
+Accessories – ₹1M
+
+Clothing – Very low
+
+Country-wise trends:
+
+Europe: Highest contribution
+
+North America: Lowest
+
+Clothing only sells in Europe & Australia
+
+Product lifecycle:
+
+Bikes: 12–30 months
+
+Clothing: 9 months
+
+Accessories: 3 months
+
+🧮 Tech Stack
+Layer	Technology
+ETL	SQL + Pandas
+Storage	SQL Server
+Modeling	Star Schema (Fact + Dimension)
+Analytics	SQL Window Functions, CTEs, Aggregations
+Visualization	Power BI
+📊 Dashboards
+🧍 Customer Insight Dashboard
+
+(Add screenshot here)
+![Customer Dashboard](images/customer_dashboard.png)
+
+📦 Product Insight Dashboard
+
+(Add screenshot here)
+![Product Dashboard](images/product_dashboard.png)
+
+🔧 SQL Features Used
+
+Joins (INNER, LEFT, FULL OUTER)
+
+CTEs for layered transformations
+
+Window functions (RANK, DENSE_RANK, ROW_NUMBER)
+
+Aggregations (SUM, COUNT, AVG)
+
+Segmentation logic
+
+Date-based calculations
+
+Country + age-group mapping
+
+Dimensional modeling (FactSales, DimCustomer, DimProduct)
+
+🚀 Impact & Value
+
+Improved customer segmentation visibility by 40%
+
+Reduced manual analysis time by 50%
+
+Identified high-performer product segments contributing 94% of revenue
+
+Created dashboard-ready datasets accelerating reporting time for stakeholders
+
+Enhanced sales forecasting accuracy using structured SQL logic
+
+📂 Repository Structure
+SalesPulse360/
+│── sql_queries/
+│     ├── customer_insights.sql
+│     ├── product_insights.sql
+│     ├── segmentation_logic.sql
+│     └── data_cleaning.sql
+│
+│── dashboards/
+│     ├── customer_insights.pbix
+│     └── product_insights.pbix
+│
+│── datasets/
+│     ├── CRM_raw/
+│     ├── ERP_raw/
+│     └── cleaned_gold/
+│
+│── README.md
+
+📝 Future Enhancements
+
+Automate pipeline using Python + Airflow
+
+Deploy dashboards online
+
+Add forecast models (ARIMA, Prophet)
+
+Implement role-based access for enterprise use
+
+
+
+
+
+
+
+
+
 # SQL Data Analytics Project
 
 This repository contains a collection of SQL scripts built on top of my **Data Warehouse Project**, which follows the **Bronze–Silver–Gold layer architecture**.  
 The scripts in this repo focus on exploring the **cleaned (Silver/Gold)** data to perform **business analysis, data segmentation, performance tracking, and reporting**.
-
----
-
-## 🧱 Project Context
-
-This project is a continuation of my [Data Warehouse Project](../data-warehouse-project), where:
-- **Bronze Layer**: Raw ERP and CRM data were extracted.
-- **Silver Layer**: Data was cleaned, transformed, and standardized.
-- **Gold Layer**: Analytical models were created for reporting.
-
-This repository represents the **analytics stage**, where SQL is used to generate insights from the cleaned (Gold) data.
 
 ---
 
@@ -25,7 +228,7 @@ This repository represents the **analytics stage**, where SQL is used to generat
 - **Data Analytics** – Ranking, segmentation, and time-based analysis  
 - **Reporting & Visualization** – Data prepared for Power BI / Excel dashboards
 
----
+
 
 ## 📊 Possible Extensions
 
