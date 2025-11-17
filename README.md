@@ -114,7 +114,7 @@ The project integrates cleaned datasets from **CRM**, **ERP**, and **Product Sys
 ---
 
 ## 📊 **Dashboards**
-### ** Video**
+### **Video**
 ![video](https://youtu.be/OA6X2Yeq8lk)
 ### **🧍 Customer Insight Dashboard**
 
