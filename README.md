@@ -3,7 +3,7 @@ SalesPulse360 – End-to-End SQL Analytics & Dashboard Project
 Customer & Product Insights | SQL Data Analytics | ETL | Data Warehouse Continuation
 📌 Project Overview
 
-SalesPulse360 is an end-to-end SQL analytics project.This project is a continuation of my [Data Warehouse Project](../data-warehouse-project), where:
+-**SalesPulse360 is an end-to-end SQL analytics project.This project is a continuation of my [Data Warehouse Project](../data-warehouse-project), where:**
 - **Bronze Layer**: Raw ERP and CRM data were extracted.
 - **Silver Layer**: Data was cleaned, transformed, and standardized.
 - **Gold Layer**: Analytical models were created for reporting.
